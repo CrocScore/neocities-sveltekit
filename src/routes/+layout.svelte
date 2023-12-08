@@ -1,0 +1,51 @@
+<script>
+    import "../global.css";
+    import LeftSidebar from "./leftSidebar.svelte";
+</script>
+
+<div id="container">
+    <div id="headerArea">
+        <div id="header"></div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/example1">Example1</a></li>
+                <li><a href="/example2">Example2</a></li>
+                <li><a href="/example3">Example3</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+        <aside id="leftSidebar">
+            <LeftSidebar />
+        </aside>
+        <main>
+            <slot/>
+        </main>
+        <aside id="rightSidebar">
+            <h2>Updates</h2>
+            <div class="box">
+                <p>I have recently updated this tool as of August 2022!</p>
+                <ul style="padding-left:10px;">
+                    <li>Rewrote the JS to generate cleaner code</li>
+                    <li>Rewrote the CSS in a way that hopefully makes much more sense to edit</li>
+                    <li>Added a couple of new features!</li>
+                    <li>Old version is still available <a href="old.html" target="_blank">here</a></li>
+                </ul>
+            </div>
+            <h2>Hi there!</h2>
+            <p>Do you have a suggestion for a feature? Some criticism about the tool or something that confused you? Let me know! sadgrl[at]riseup.net</p>
+            <h3>Other Tools</h3>
+            <ul>
+                <li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a>
+                </li><li><a href="https://sadgrl.online/webmastery/webmaster-links.html" target="_blank">Webmaster Links</a></li>
+                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a></li>
+                <li><a href="https://sadgrl.online/webmastery/downloads/fonts.html" target="_blank">Fonts</a></li>
+                <li><a href="https://sadgrl.online/projects/ideas/" target="_blank">Site Ideas</a></li>
+
+            </ul>
+        </aside>
+    </div>
+    <footer id="footer">CC0 Public Domain, 2022</footer>
+</div>
